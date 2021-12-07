@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+
+:root {
+  --primary-color: hsl(196, 78%, 61%);
+  --secondary-color: hsl(217, 15%, 83%);
+  --success-color: hsl(165, 58%, 55%);
+  --info-color: hsl(214, 79%, 65%);
+  --warning-color: hsl(43, 100%, 66%);
+  --danger-color: hsl(354, 81%, 63%);
+  --primary-color-darker: hsl(196, 68%, 54%);
+  --secondary-color-darker: hsl(215, 13%, 70%);
+  --success-color-darker: hsl(165, 55%, 48%);
+  --info-color-darker: hsl(214, 68%, 58%);
+  --warning-color-darker: hsl(39, 97%, 62%);
+  --danger-color-darker: hsl(354, 67%, 56%);
+  --primary-color-lighter: hsl(196, 78%, 81%);
+  --secondary-color-lighter: hsl(214, 16%, 92%);
+  --success-color-lighter: hsl(165, 58%, 75%);
+  --info-color-lighter: hsl(214, 79%, 85%);
+  --warning-color-lighter: hsl(43, 100%, 86%);
+  --danger-color-lighter: hsl(354, 81%, 83%);
+  --secondary-color-darkest: hsl(215, 11%, 30%);
+  --secondary-color-lightest: hsl(220, 1%, 98%);
+  --ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  --ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  --ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  --ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  --ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  --ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+  --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  --ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+  --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+  --ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  --mainColor: #f9aa43;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  /* overflow-x: hidden; */
+}
+
+.main-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+body .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 20px 0;
+}
+
+body .container .card {
+  position: relative;
+  min-width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 30px;
+  transition: 0.5s;
+}
+
+body .container .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #0916ac;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+body .container .card .box:hover {
+  transform: translateY(-50px);
+}
+
+body .container .card .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgb(122, 187, 227, 0.4);
+}
+
+body .container .card .box .content {
+  padding: 20px;
+  text-align: center;
+}
+
+body .container .card .box .content h2 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 6.5vw;
+  color: rgba(255, 255, 255, 0.644);
+}
+
+body .container .card .box .content p {
+  font-size: 10px;
+  color: #000;
+  z-index: 1;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+
+body .container .card .box .content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+body .container .card .box .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+body .container .card .box .content a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: black;
+  color: #000;
+}
+
+.img-hrd {
+  width: 85%;
+}
+.hack1 {
+  text-align: center;
+}
+.content {
+  z-index: 1;
+}
+#text-set {
+  font-size: 20px;
+}
+.more {
+  position: relative;
+  top: 30px;
+}
+.head {
+  position: relative;
+  top: 20px;
+  font-family: cursive;
+  cursor: pointer;
+  font-size: 100px;
+  padding: 40px;
+}
+
+body {
+  background-color: #000 !important;
+  background-image: url("https://image.ibb.co/mjnygo/stars.png");
+  animation: move-twink-back 500s linear infinite;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+#qr {
+  position: absolute;
+  padding: 20px;
+  height: 150px;
+}
+
+.mid-align {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: auto auto auto;
+
+  margin: 0% 25% 5% 25%;
+  padding: 10px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20%;
+  text-align: center;
+}
+
+.prob-head {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.aligning {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0% 10%;
+}
+
+.w25 {
+  width: 25%;
+}
+
+.telidu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-end;
+  margin: 20px;
+}
+
+.head-text {
+  font-size: 50px;
+  padding: 20px;
+}
+
+.reg-container,
+.pri-container {
+  margin-top: 3%;
+}
+
+.prize-details,
+.registration-details {
+  padding: 18px;
+  width: 70%;
+  /* border: 1px solid #232427; */
+  border: 1px solid white;
+  border-radius: 24px;
+  text-align: center;
+  margin: 0 auto;
+  /* background-color: #2A2B2F; */
+  /* box-shadow: -4px 4px 11px 5px #000; */
+  box-shadow: inset 1px -1px 10px 1px #fff;
+  min-height: 280px !important;
+}
+
+.prize-details:hover,
+.registration-details:hover {
+  box-shadow: outset 0 0 10px #fff;
+  /* transition: all 0.2s ease-in-out;  
+background-color: hsl(90, 3%, 7%);
+animation-name: changebg;
+animation-duration: 2s;
+box-shadow: 0; */
+}
+
+.sub-title {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+.first-p {
+  margin-top: 8%;
+  color: #fff;
+}
+
+.details {
+  margin-top: 1.5%;
+  color: #fff;
+}
+
+@font-face {
+  font-family: nitro;
+  src: url(../fonts/nitro.ttf);
+}
+
+.head,
+.prob-head {
+  font-size: 3.2vw;
+  font-family: nitro;
+  text-decoration: overline;
+  text-decoration-color: #f9aa43;
+}
+
+.prob-head {
+  font-size: 2.5vw !important;
+  margin-top: 80px;
+}
